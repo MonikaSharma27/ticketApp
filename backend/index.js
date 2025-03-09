@@ -11,7 +11,7 @@ app.use(bodyParser.json());
 
 app.use(cors());
 
-const port = 3001
+const port = 3000
 
 dotenv.config();
 

@@ -24,10 +24,12 @@ const TicketForm = () => {
     axios.post('http://localhost:3000/ticket', formData)
       .then((response) => {
         console.log(response.data);
+        window.location.href='/'
       })
       .catch((error) => {
         console.error(error);
       });
+      
   };
 
   return (
