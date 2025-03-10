@@ -27,6 +27,7 @@ try{
 }
 
 app.use("/ticket", ticketRoute)
+app.use("/", ticketRoute)
 
 
 app.get('/', (req, res) => {
