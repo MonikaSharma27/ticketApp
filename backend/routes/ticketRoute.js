@@ -1,5 +1,5 @@
 import express from 'express';
-import {createTicket, EditTicket} from '../controller/ticket.controller.js';
+import {createTicket} from '../controller/ticket.controller.js';
 import { getTicket } from '../controller/ticket.controller.js';
 import { deleteTicket } from '../controller/ticket.controller.js';
 const router = express.Router()
