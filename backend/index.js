@@ -6,12 +6,13 @@ import cors from 'cors';
 
 import ticketRoute from './routes/ticketRoute.js';
 
+
 const app = express()
 app.use(bodyParser.json());
 
 app.use(cors());
 
-const port = 3000
+const port = 3000;
 
 dotenv.config();
 
@@ -27,7 +28,6 @@ try{
 }
 
 app.use("/ticket", ticketRoute)
-app.use("/", ticketRoute)
 
 
 app.get('/', (req, res) => {

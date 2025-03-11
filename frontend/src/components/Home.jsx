@@ -1,19 +1,26 @@
 import React, { useEffect, useState } from 'react'
 import TicketCard from './TicketCard'
-import  axios  from './../../../backend/node_modules/axios/dist/esm/axios';
+import  axios  from 'axios';
 
 const Home = () => {
 
   const [tickets, setTicket]=useState([]);
+  const [errror, setError]=useState(null);
 
 useEffect(()=>{
   const getTicket = async ()=>{
     try{
-     const res  = await axios.get("http://localhost:3000/");
+     const res  = await axios.get("http://localhost:3000/ticket");
      console.log(res.data);
-     setTicket(res.data)
+     if (Array.isArray(res.data)){
+      setTicket(res.data)
+     }else{
+      setError("data is not error")
+     }
+     
     }catch(error){
 console.log(error)
+setError(error.message)
     }
   }
   getTicket();

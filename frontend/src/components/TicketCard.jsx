@@ -3,6 +3,7 @@ import Delete from './Delete'
 import PriorityDisplay from './PriorityDisplay'
 import ProgressDisplay from './ProgressDisplay'
 import StatusDisplay from './StatusDisplay'
+import { Link } from 'react-router-dom';
 
 
 
@@ -32,9 +33,10 @@ const formatTimestamp = (timestamp)=>{
       <div className='flex mb-3'>
       <PriorityDisplay priority={ticket.priority} />
       <div className='ml-auto'>
-      <Delete/>
+      <Delete id = {ticket._id}/>
       </div>
       </div>
+      <Link to={`/TicketPage/${ticket._id}`} style={{display: "contents"}}>
      <h4 className='font-bold text-xl'>{ticket.title}</h4>
      <hr className='h-px border-0 bg-[#2b3441] mb-2'/>
      <p className='whitespace-pre-wrap text-sm'> {ticket.description}</p>
@@ -47,8 +49,8 @@ const formatTimestamp = (timestamp)=>{
       <div className='ml-auto flex items-end'>
       <StatusDisplay status = {ticket.status}/>
       </div>
-      
       </div>
+      </Link>
     </div>
   )
 }
