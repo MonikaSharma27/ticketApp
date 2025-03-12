@@ -3,7 +3,7 @@ import React from 'react';
 
 const StatusDisplay = ({ status }) => {
   const getColor = (status) => {
-    if (!status) return "bg-slate-700"; // default color if status is undefined
+    if (!status) return "bg-slate-700"; 
     let color = "bg-slate-700";
     switch (status.toLowerCase()) {
       case "done":

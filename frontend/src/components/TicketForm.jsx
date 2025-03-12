@@ -32,7 +32,7 @@ const TicketForm = () => {
   return (
     <div className='flex justify-center'>
       <form action="" className='rounded-xl p-4 flex flex-col gap-3 w-full md:w-1/2 ' method='post' onSubmit={handleSubmit}>
-        <h3 className='text-2xl'> "Create your Ticket"</h3>
+        <h3 className='text-2xl font-bold'> Create your Ticket</h3>
         <label >Title</label>
         <input type="text" id='title' name='title' required={true} value={formData.title} onChange={handleChange} className='m-1 rounded bg-[#47566a] p-1 outline-none'/>
         <label >Description</label>

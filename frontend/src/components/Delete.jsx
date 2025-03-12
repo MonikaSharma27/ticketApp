@@ -15,9 +15,6 @@ const deleteTicket = async()=>{
   
 }
 
-
-
-
   return (
     <div className='text-red-500 cursor-pointer'>
       <p onClick={deleteTicket}>close</p>
