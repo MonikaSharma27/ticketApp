@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
+
 const TicketForm = () => {
   const [formData, setFormData] = useState({
     title: "",
@@ -21,8 +22,7 @@ const TicketForm = () => {
     e.preventDefault();
     axios.post('http://localhost:3000/ticket', formData)
       .then((response) => {
-        console.log(response.data);
-        window.location.href = '/';
+        window.location.href='/home'
       })
       .catch((error) => {
         console.error(error);

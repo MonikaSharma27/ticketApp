@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form";
 import axios from "axios";
 import SignupRight from "./signupRight";
 
+
 const Signup = () => {
   const {
     register,
@@ -22,11 +23,12 @@ const Signup = () => {
       .then((res) => {
         console.log(res.data);
         if (res.data) {
-          alert("signup successfully");
+         
+           window.location.href='/home'
         }
       })
       .catch((err) => {
-        alert("Error:" + err, "Please enter correct information");
+        toast.error( err);
       });
   };
 

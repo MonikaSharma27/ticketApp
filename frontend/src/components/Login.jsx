@@ -5,6 +5,7 @@ import  axios  from 'axios';
 import LoginLeft from './LoginLeft';
 
 
+
 const Login = () => {
 
   const {
@@ -22,11 +23,11 @@ const Login = () => {
    .then((res)=>{
     console.log(res.data)
     if(res.data){
-      alert("Login successfully")
-     window.location.href='/home'
+      
+     window.location.href='/home';
     }
    }).catch((err)=>{
-alert("Please enter correct information")
+    toast.error( err +'Please enter correct Username or password!');
    })
   }
 

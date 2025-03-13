@@ -36,7 +36,7 @@ export const signupUser = async (req, res) => {
     if(result){
       let token =jwt.sign({email, id:user._id}, process.env.JWT_KEY);
        res.cookie("token", token);
-       res.redirect('/ticket');
+       res.send(token)
   
     }
     else{

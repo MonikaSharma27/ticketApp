@@ -2,6 +2,7 @@ import React from 'react'
 import  axios  from './../../../backend/node_modules/axios/dist/esm/axios';
 
 
+
 const Delete = ({id}) => {
 
 const deleteTicket = async()=>{
@@ -9,6 +10,8 @@ const deleteTicket = async()=>{
     const res = await axios.delete(`http://localhost:3000/ticket/${id}`)
     console.log(res.data);
     window.location.reload();
+   
+    
   }catch(error){
     console.log(error)
   }
