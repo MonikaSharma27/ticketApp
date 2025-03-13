@@ -23,6 +23,7 @@ const Login = () => {
     console.log(res.data)
     if(res.data){
       alert("Login successfully")
+     window.location.href='/home'
     }
    }).catch((err)=>{
 alert("Please enter correct information")
