@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import TicketCard from './TicketCard'
 import  axios  from 'axios';
+import Navbar from './Navbar';
 
 const Home = () => {
 
@@ -28,7 +29,9 @@ setError(error.message)
 
 
   return (
-    <div className='p-5'>
+    <>
+    <Navbar/>
+    <div className='p-5 '>
       
       <div className='lg:grid grid-cols-2 xl:grid-cols-4'>
         {tickets.map((ticket)=>(
@@ -41,6 +44,7 @@ setError(error.message)
       
       </div>
     </div>
+    </>
   )
 }
 

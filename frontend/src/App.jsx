@@ -13,12 +13,14 @@ function App() {
   return (
     <>
     <div className='bg-[#2b3441] text-[#f1f3f5] h-screen  max-h-screen '>
-    <Navbar/>
+   
     <Routes>
-    <Route path='/' element = { <Home/>}/>
+    <Route path='/' element = { <Signup/>}/>
+    <Route path='/login' element = { <Login/>}/>
+    <Route path='/home' element = { <Home/>}/>
       <Route path='/ticketpage/:id' element = { <TicketPage/>}/>
-      <Route path='/login' element = { <Login/>}/>
-      <Route path='/signup' element = { <Signup/>}/>
+     
+      
     </Routes>
         
     </div>
