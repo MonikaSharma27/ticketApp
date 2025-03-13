@@ -31,14 +31,14 @@ const Signup = () => {
   };
 
   return (
-    <div className=" bg-[#47566a] h-full w-full absolute ">
-      <div className="p-16">
+    <div className=" bg-[#47566a] h-screen p-16">
       
-      <div className="flex bg-red-400 ">
-        <div className=" text-[#f1f3f5]  max-h-screen w-[50%] ">
+      
+      <div className="flex bg-red-400 h-full">
+        <div className=" text-[#f1f3f5]   ">
           <div
             className="bg-[#47566a] w-[85%] 
-    relative top-32 mx-auto p-3  rounded-md sm:w-[60%] md:w-[35%] lg:w-[30%] "
+    relative top-32 mx-auto p-3  rounded-md  "
           >
             <h1 className="text-3xl font-bold mb-10 mt-10 text-center lg:mt-14 lg:text-4xl">
               Sign up
@@ -109,10 +109,9 @@ const Signup = () => {
           </div>
         </div>
 
-        <div className="w-[50%] bg-[#2b3441]  max-h-screen h-screen rounded-bl-[25%] rounded-tl-[25%] ">
+        <div className="w-[50%] bg-[#2b3441]   rounded-bl-[25%] rounded-tl-[25%] ">
           <signupRight />
         </div>
-      </div>
       </div>
     </div>
   );
