@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import  axios  from 'axios';
+import LoginLeft from './LoginLeft';
 
 
 const Login = () => {
@@ -29,33 +30,67 @@ alert("Please enter correct information")
   }
 
   return (
-    <div className='bg-[#2b3441] text-[#f1f3f5]  max-h-screen'>
-      <div className='bg-[#47566a] w-[85%] 
-      relative top-32 mx-auto p-3  rounded-md sm:w-[60%] md:w-[35%] lg:w-[30%] '>
-        <h1 className='text-3xl font-bold mb-10 mt-10 text-center lg:mt-14 lg:text-4xl'>Login</h1>
-        <form action="" className='flex flex-col 'onSubmit={handleSubmit(onSubmit)}>
-          
-          <div className='mb-4'>
-          <input type="email" placeholder='Email' {...register("email",{required:true})}
-          className='outline-none border-2 border-white w-full rounded-md py-1 px-2 '/>
-          {errors.email && (<span className='text-sm text-red-500 '>This field is required </span>)}
-          </div>
-         
-       <div className='mb-12'>
-       <input type="password" placeholder='Password'{...register("password",{required:true})}
-          className='outline-none border-2 border-white w-full rounded-md py-1 px-2 '/>
-          {errors.password && (<span className='text-sm text-red-500 '>This field is required </span>)}
-       </div>
-          
-
-         <button className=' bg-[#2b3441] text-white px-2 py-1 rounded-md font-bold w-[80%] 
-          hover:bg-white mb-5 hover:text-[#2b3441] lg:text-2xl mx-auto'>Login</button>
-         
-      </form>
-      </div>
+    <div className=" bg-[#2b3441] sm:bg-[#47566a] h-screen sm:p-16 p-7 sm:px-28">
       
+      
+      <div className="flex sm:bg-white h-full items-center justify-center rounded-md ">
+         <div className="w-[50%] bg-[#2b3441]  h-full rounded-br-[25%] rounded-tr-[25%] rounded-tl-md rounded-bl-md hidden sm:block ">
+          <LoginLeft/>
+        </div>
+        <div className=" text-[#2b3441] sm:w-[50%] sm:p-10 xl:px-20 bg-white rounded-md">
+          <div
+            className=" w-full p-6 rounded-md  "
+          >
+            <h1 className="text-3xl font-bold mb-10 mt-10 text-center lg:mt-10 lg:text-5xl">
+              Login
+            </h1>
+            <form
+              action=""
+              className="flex flex-col"
+              onSubmit={handleSubmit(onSubmit)}
+            >
+              <div className="mb-3">
+                <input
+                  type="email"
+                  placeholder="Email"
+                  {...register("email", { required: true })}
+                  className="outline-none border-2 border-gray-300 w-full rounded-md py-1 px-3 mb-4 bg-gray-200"
+                />
+                {errors.email && (
+                  <span className="text-sm text-red-500 ">
+                    This field is required{" "}
+                  </span>
+                )}
+              </div>
+
+              <div className=" mb-8">
+                <input
+                  type="password"
+                  placeholder="Password"
+                  {...register("password", { required: true })}
+                  className="outline-none border-2 border-gray-300 w-full rounded-md py-1 px-2 bg-gray-200"
+                />
+                {errors.password && (
+                  <span className="text-sm text-red-500 ">
+                    This field is required{" "}
+                  </span>
+                )}
+              </div>
+
+              <button className="bg-[#2b3441] text-white p-1 text-2xl font-bold rounded-md 
+            hover:bg-white hover:text-[#2b3441] hover:border-2 hover:border-[#2b3441] ">Login</button>
+            <p className='text-end mt-2 sm:hidden'>Not registered ? <Link to="/signup" className='font-bold'>Signup</Link></p>
+            </form>
+          </div>
+        </div>
+
+        
+      </div>
     </div>
   )
 }
 
 export default Login
+
+
+

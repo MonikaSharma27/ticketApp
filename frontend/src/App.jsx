@@ -15,8 +15,8 @@ function App() {
     <div className='bg-[#2b3441] text-[#f1f3f5] h-screen  max-h-screen '>
    
     <Routes>
-    <Route path='/' element = { <Signup/>}/>
-    <Route path='/login' element = { <Login/>}/>
+    <Route path='/' element = { <Login/>}/>
+    <Route path='/signup' element = { <Signup/>}/>
     <Route path='/home' element = { <Home/>}/>
       <Route path='/ticketpage/:id' element = { <TicketPage/>}/>
      

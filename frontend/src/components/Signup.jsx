@@ -2,7 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import axios from "axios";
-import signupRight from "./signupRight";
+import SignupRight from "./signupRight";
+
 
 const Signup = () => {
   const {
@@ -31,29 +32,28 @@ const Signup = () => {
   };
 
   return (
-    <div className=" bg-[#47566a] h-screen p-16">
+    <div className=" bg-[#2b3441] sm:bg-[#47566a] h-screen sm:p-16 p-7 sm:px-28">
       
       
-      <div className="flex bg-red-400 h-full">
-        <div className=" text-[#f1f3f5]   ">
+      <div className="flex sm:bg-white h-full items-center justify-center rounded-md ">
+        <div className=" text-[#2b3441] sm:w-[50%] sm:p-10 xl:px-20 ">
           <div
-            className="bg-[#47566a] w-[85%] 
-    relative top-32 mx-auto p-3  rounded-md  "
+            className="bg-white w-full p-6  rounded-md  "
           >
-            <h1 className="text-3xl font-bold mb-10 mt-10 text-center lg:mt-14 lg:text-4xl">
+            <h1 className="text-3xl font-bold mb-10 mt-10 text-center lg:mt-10 lg:text-5xl">
               Sign up
             </h1>
             <form
               action=""
-              className="flex flex-col"
+              className="flex flex-col "
               onSubmit={handleSubmit(onSubmit)}
             >
-              <div className="mb-3">
+              <div className="mb-3 ">
                 <input
                   type="text"
                   placeholder="Full Name"
                   {...register("fullname", { required: true })}
-                  className="outline-none border-2 border-white w-full  rounded-md py-1 px-2 mb-4"
+                  className="outline-none border-2 border-gray-300 w-full  rounded-md py-1 px-2 mb-4 bg-gray-200"
                 />
                 {errors.fullname && (
                   <span className="text-sm text-red-500 ">
@@ -67,7 +67,7 @@ const Signup = () => {
                   type="email"
                   placeholder="Email"
                   {...register("email", { required: true })}
-                  className="outline-none border-2 border-white w-full rounded-md py-1 px-2 mb-4"
+                  className="outline-none border-2 border-gray-300 w-full rounded-md py-1 px-2 mb-4 bg-gray-200"
                 />
                 {errors.email && (
                   <span className="text-sm text-red-500 ">
@@ -76,12 +76,12 @@ const Signup = () => {
                 )}
               </div>
 
-              <div className="mb-14 lg:mb-16">
+              <div className=" mb-8">
                 <input
                   type="password"
                   placeholder="Password"
                   {...register("password", { required: true })}
-                  className="outline-none border-2 border-white w-full rounded-md py-1 px-2 "
+                  className="outline-none border-2 border-gray-300 w-full rounded-md py-1 px-2 bg-gray-200"
                 />
                 {errors.password && (
                   <span className="text-sm text-red-500 ">
@@ -90,27 +90,15 @@ const Signup = () => {
                 )}
               </div>
 
-              <div className="flex justify-between items-center mb-6 lg:mb-7">
-                <button
-                  className=" bg-[#2b3441] text-white px-2 py-1 rounded-md font-bold 
-        hover:bg-white hover:text-[#2b3441] lg:text-2xl"
-                >
-                  Sign up
-                </button>
-                <p className="text-sm">
-                  Already Signed up?{" "}
-                  <Link to="/login" className="text-lg font-medium">
-                    {" "}
-                    Login
-                  </Link>
-                </p>
-              </div>
+              <button className="bg-[#2b3441] text-white p-1 text-2xl font-bold rounded-md 
+              hover:bg-white hover:text-[#2b3441] hover:border-2 hover:border-[#2b3441] ">Signup</button>
+              <p className='text-end mt-2 sm:hidden text-sm'>Already have an account ? <Link to="/" className='text-lg font-bold'>Login</Link></p>
             </form>
           </div>
         </div>
 
-        <div className="w-[50%] bg-[#2b3441]   rounded-bl-[25%] rounded-tl-[25%] ">
-          <signupRight />
+        <div className="w-[50%] bg-[#2b3441]  h-full rounded-bl-[25%] rounded-tl-[25%] hidden sm:block rounded-tr-md rounded-br-md">
+          <SignupRight/>
         </div>
       </div>
     </div>
