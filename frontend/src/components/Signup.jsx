@@ -34,7 +34,7 @@ const Signup = () => {
 
   return (
     <div className="bg-[#2b3441] sm:bg-[#47566a] h-screen sm:p-16 p-4 sm:px-28">
-      <div className="md:flex sm:bg-white h-full content-center md:justify-center rounded-md">
+      <div className="sm:flex sm:bg-white h-full content-center sm:justify-center rounded-md">
         <div className="text-[#2b3441] sm:w-[50%] sm:p-10 xl:px-20 p-4">
           <div className="bg-white w-full p-6 rounded-md">
             <h1 className="text-3xl font-bold mb-6 mt-6 text-center lg:mt-10 lg:text-5xl">
