@@ -27,7 +27,7 @@ const Login = () => {
      window.location.href='/home';
     }
    }).catch((err)=>{
-    toast.error( err +'Please enter correct Username or password!');
+    console.log( err +'Please enter correct Username or password!');
    })
   }
 

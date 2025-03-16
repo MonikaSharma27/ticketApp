@@ -16,7 +16,7 @@ useEffect(()=>{
      if (Array.isArray(res.data)){
       setTicket(res.data)
      }else{
-      setError("data is not error")
+      setError("data is not error",errror)
      }
      
     }catch(error){

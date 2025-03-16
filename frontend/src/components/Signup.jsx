@@ -28,7 +28,7 @@ const Signup = () => {
         }
       })
       .catch((err) => {
-        toast.error( err);
+        console.log( err);
       });
   };
 

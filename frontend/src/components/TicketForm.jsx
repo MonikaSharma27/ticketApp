@@ -21,7 +21,7 @@ const TicketForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios.post('https://ticket-app-zjr9.vercel.app/ticket', formData)
-      .then((response) => {
+      .then(() => {
         window.location.href='/home'
       })
       .catch((error) => {
