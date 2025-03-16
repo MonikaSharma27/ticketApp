@@ -64,7 +64,7 @@ const TicketForm = () => {
           <option value="Started">Started</option>
           <option value="Done">Done</option>
         </select>
-        <input type="submit" className='m-1 rounded bg-blue-500 p-1 outline-none' value="CREATE TICKET" />
+        <input type="submit" className='m-1 rounded bg-blue-500 p-1 outline-none' value="CREATE TICKET"/>
       </form>
     </div>
   );
