@@ -35,7 +35,7 @@ const Login = () => {
     <div className=" bg-[#2b3441] sm:bg-[#47566a] h-screen sm:p-16 p-7 sm:px-28">
       
       
-      <div className="flex sm:bg-white h-full items-center justify-center rounded-md ">
+      <div className="md:flex sm:bg-white h-full items-center md:justify-center rounded-md">
          <div className="w-[50%] bg-[#2b3441]  h-full rounded-br-[25%] rounded-tr-[25%] rounded-tl-md rounded-bl-md hidden sm:block ">
           <LoginLeft/>
         </div>
