@@ -25,7 +25,7 @@ setError(error.message)
     }
   }
   getTicket();
-},[])
+},[errror])
 
 
   return (
