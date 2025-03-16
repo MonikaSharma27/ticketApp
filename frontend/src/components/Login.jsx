@@ -19,7 +19,7 @@ const Login = () => {
       email:data.email,
       password:data.password
     }
-  await axios.post("https://ticket-app-zjr9.vercel.app/user/login", userInfo)
+  await axios.post(" /user/login", userInfo)
    .then((res)=>{
     console.log(res.data)
     if(res.data){
@@ -41,7 +41,7 @@ const Login = () => {
         </div>
         <div className=" text-[#2b3441] sm:w-[50%] sm:p-10 xl:px-20 bg-white rounded-md">
           <div
-            className=" w-full p-6 rounded-md  "
+            className=" w-full sm:p-0 p-6 rounded-md  "
           >
             <h1 className="text-3xl font-bold mb-10 mt-10 text-center lg:mt-10 lg:text-5xl">
               Login

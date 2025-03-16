@@ -11,7 +11,7 @@ const Home = () => {
 useEffect(()=>{
   const getTicket = async ()=>{
     try{
-     const res  = await axios.get("https://ticket-app-zjr9.vercel.app/ticket");
+     const res  = await axios.get(" /ticket");
      console.log(res.data);
      if (Array.isArray(res.data)){
       setTicket(res.data)

@@ -7,7 +7,7 @@ const Delete = ({id}) => {
 
 const deleteTicket = async()=>{
   try{
-    const res = await axios.delete(`https://ticket-app-zjr9.vercel.app/ticket/${id}`)
+    const res = await axios.delete(` /ticket/${id}`)
     console.log(res.data);
     window.location.reload();
    
