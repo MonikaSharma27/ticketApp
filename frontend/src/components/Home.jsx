@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import TicketCard from './TicketCard'
-import  axios  from 'axios';
+import axiosInstance from '../../../backend/axios'
 import Navbar from './Navbar';
 
 const Home = () => {
@@ -11,7 +11,7 @@ const Home = () => {
 useEffect(()=>{
   const getTicket = async ()=>{
     try{
-     const res  = await axios.get("/ticket");
+     const res  = await axiosInstance.get("/ticket");
      console.log(res.data);
      if (Array.isArray(res.data)){
       setTicket(res.data)

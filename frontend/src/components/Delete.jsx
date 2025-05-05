@@ -1,12 +1,11 @@
 import React from 'react'
-import axios from 'axios'
-
+import axiosInstance from '../../../backend/axios'
 
 const Delete = ({id}) => {
 
 const deleteTicket = async()=>{
   try{
-    const res = await axios.delete(` /ticket/${id}`)
+    const res = await axiosInstance.delete(` /ticket/${id}`)
     console.log(res.data);
     window.location.reload();
    

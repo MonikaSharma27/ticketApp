@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
-import  axios  from 'axios';
+import axiosInstance from '../../../backend/axios'
 import LoginLeft from './LoginLeft';
 
 
@@ -19,7 +19,7 @@ const Login = () => {
       email:data.email,
       password:data.password
     }
-  await axios.post("/user/login", userInfo)
+  await axiosInstance.post("/user/login", userInfo)
    .then((res)=>{
     console.log(res.data)
     if(res.data){

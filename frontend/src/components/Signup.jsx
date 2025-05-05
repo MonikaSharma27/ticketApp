@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
-import axios from "axios";
+import axiosInstance from '../../../backend/axios'
 import SignupRight from "./signupRight";
 
 
@@ -18,7 +18,7 @@ const Signup = () => {
       email: data.email,
       password: data.password,
     };
-    await axios
+    await axiosInstance
       .post("/user/signup", userInfo)
       .then((res) => {
         console.log(res.data);

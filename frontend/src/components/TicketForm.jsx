@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import axios from 'axios';
+import axiosInstance from '../../../backend/axios'
 
 
 const TicketForm = () => {
@@ -20,7 +20,7 @@ const TicketForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post(' /ticket', formData)
+    axiosInstance.post(' /ticket', formData)
       .then(() => {
         window.location.href='/home'
       })

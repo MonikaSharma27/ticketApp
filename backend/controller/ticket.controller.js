@@ -23,7 +23,7 @@ res.status(200).json(ticket)
 export const deleteTicket = async (req,res)=>{
     try{
         const id= req.params.id;
-const ticket = await Ticket.findByIdAndDelete(id);
+ await Ticket.findByIdAndDelete(id);
 res.status(200).json({message: "Ticket deleted succesfully"})
     }catch(error){
         res.status(400).json({message: error.message});
