@@ -1,5 +1,6 @@
 import React from 'react'
-import axiosInstance from '../../../backend/axios'
+import axiosInstance from '../../axios';
+
 
 const Delete = ({id}) => {
 

@@ -17,6 +17,13 @@ app.use(bodyParser.json());
 
 app.use(cors());
 
+app.use(cors({
+    origin: "http://localhost:5173", // Your frontend URL
+    credentials: true,
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    allowedHeaders: ["Content-Type", "Authorization"]
+}));
+
 const port = 3000;
 
 dotenv.config();

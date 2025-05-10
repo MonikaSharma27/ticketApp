@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import axiosInstance from '../../../backend/axios'
+import axiosInstance from '../../axios'
 
 
 const TicketForm = () => {

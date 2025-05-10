@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import TicketCard from './TicketCard'
-import axiosInstance from '../../../backend/axios'
 import Navbar from './Navbar';
+import axiosInstance from '../../axios';
 
 const Home = () => {
 
@@ -35,7 +35,7 @@ setError(error.message)
       
       <div className='lg:grid grid-cols-2 xl:grid-cols-4'>
         {tickets.map((ticket)=>(
-          <div key={ticket.id} >
+          <div key={ticket._id} >
         <h3 className='font-bold text-xl '>{ticket.category}</h3>
        <TicketCard ticket={ticket} />
 
