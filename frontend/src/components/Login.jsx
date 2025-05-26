@@ -16,10 +16,12 @@ const Login = () => {
   }=useForm();
 
   const onSubmit =async (data)=>{
+    console.log(data);
     const userInfo ={
       email:data.email,
       password:data.password
     }
+    console.log(userInfo);
   await axiosInstance.post("/user/login", userInfo)
    .then((res)=>{
     console.log(res.data)

@@ -12,13 +12,14 @@ import userRoute from './routes/userRoute.js';
 
 
 const app = express()
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 app.use(cookieParser());
 app.use(bodyParser.json());
 
 app.use(cors());
 
 app.use(cors({
-    origin: "http://localhost:5173", // Your frontend URL
+    origin: API_BASE_URL, // Your frontend URL
     credentials: true,
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type", "Authorization"]

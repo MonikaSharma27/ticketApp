@@ -11,6 +11,7 @@ const Home = () => {
 useEffect(()=>{
   const getTicket = async ()=>{
     try{
+      
      const res  = await axiosInstance.get("/ticket");
      console.log(res.data);
      if (Array.isArray(res.data)){
